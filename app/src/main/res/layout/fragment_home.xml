@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Home"
+    android:scrollbars="none"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/banner"
+        android:scaleType="fitXY"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Now Playing"
+        android:textSize="30dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nowPlayRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/movie_item"
+        tools:itemCount="5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Popular Movies"
+        android:textSize="30dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popMovRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="horizontal"/>
+
+
+
+
+</LinearLayout>
+</ScrollView>
